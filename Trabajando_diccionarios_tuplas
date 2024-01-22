@@ -1,0 +1,36 @@
+seleccion = int(input('Seleccione 1 para diccionarios o 2 para tuplas: \n'))
+
+if seleccion == 1:
+
+
+  #TAREA diccionarios
+
+  print("PARTE DE TAREA CON DICCIONARIOS")
+  Personaje_1 = {'nombre':'Satoru','apellido':'Gojo','fuente':'anime','sexo':'masculino'} #JJK
+  Personaje_2 = {'nombre':'Wakana','apellido':'Gojo','fuente':'anime','sexo':'masculino'} #My dress up darling
+
+  if Personaje_1 == Personaje_2:
+    print("Ingresaste al mismo personaje\n")
+  else:
+    print('Son personajes diferentes\n')
+
+
+elif seleccion == 2:
+  #TAREA tuplas
+
+  print("PARTE DE TAREA CON TUPLAS")
+  Meses = ('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre')
+  try:
+    Meses[-1] = 'bebiembre'
+    print(Meses,"\n")
+
+  except:
+    print(Meses,"\n")
+    print("Mi loco, tato que ese es el apodo pero pa la base de datos no puedes cambiarle el nombre al mes \n")
+    print("Para hacer eso tienes que hacer una lista personal, y ahí si te lo permito \n")
+    Meses_personal = list(Meses)
+    Meses_personal[-1] = 'bebiembre'
+    print("Mira tu lista personal pa que no te quejes:\n", Meses_personal)
+
+else:
+  print("Le dijimos 1 o 2 manin")
