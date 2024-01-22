@@ -1,0 +1,17 @@
+#Tarea de navidad:
+def incrementar_por_uno(lista):
+    for i in range(len(lista)):
+        if isinstance(lista[i], list):
+            # Si el elemento es una lista, llamar a la función
+            lista[i] = incrementar_por_uno(lista[i])
+        elif isinstance(lista[i], int):
+            # Si el elemento es un número entero, incrementar por 1
+            lista[i] += 1
+        elif isinstance(lista[i], str):
+            del(lista[i])
+    return lista
+
+
+mi_lista = [1, 2, [3, 4], 5, 6, 'peter parker']
+
+incrementar_por_uno(mi_lista)
