@@ -1,0 +1,67 @@
+Notabigdata = input('Ingresa tu nota de Big Data: ')
+Notaprog = input('Ingresa  tu nota de Fundamentos de Programación: ')
+Notagoogle = input('Ingresa tu nota de Google Analytics: ')
+Notadirec = input('Ingresa tu nota de Habilidades de Dirección: ')
+Lista = [float(Notabigdata),float(Notaprog),float(Notagoogle),float(Notadirec)]
+print("Estas son tus notas en orden:",Lista,"\n")
+
+print("Tu nota de Big Data es: ", Lista[0])
+print("Tu nota de Fundamentos de programación es: ", Lista[1])
+print("Tu nota de Google Analytics es: ", Lista[2])
+print("Tu nota de Habilidades de Dirección es: ", Lista[3],"\n")
+
+
+#Condicionales de Big Data
+if Lista[0] >= 90:
+  print("Ey pero te fue super bien en Big Data","\n")
+
+elif Lista[0] >= 75:
+  print("Bueno mio al meno pasate Big Data normalll","\n")
+
+elif Lista[0] >= 50:
+  print("Si esto no fuera SBS, tuvieras quemao en Big Data, pero aqui pasate, dale pa alante","\n")
+
+else:
+  print("BUEEEENO MANIIITO, USTED SE LA ACABA DE BEBER. USTED SOOOLOO EN BIG DATA","\n")
+
+
+#Condicionales de Fundamentos de programación
+if Lista[1] >= 90:
+  print("Ey pero te fue super bien en Fundamentos de Programación","\n")
+
+elif Lista[1] >= 75:
+  print("Bueno mio al meno pasate Fundamentos de Programación normalll","\n")
+
+elif Lista[1] >= 50:
+  print("Si esto no fuera SBS, tuvieras quemao en Fundamentos de Programación, pero aqui pasate, dale pa alante","\n")
+
+else:
+  print("BUEEEENO MANIIITO, USTED SE LA ACABA DE BEBER. USTED SOOOLOO EN PROGRAMACION","\n")
+
+
+#Condicionales de Google Analytics
+if Lista[2] >= 90:
+  print("Ey pero te fue super bien en Google Analytics","\n")
+
+elif Lista[2] >= 75:
+  print("Bueno mio al meno pasate Google Analytics normalll","\n")
+
+elif Lista[2] >= 50:
+  print("Si esto no fuera SBS, tuvieras quemao en Google Analytics, pero aqui pasate, dale pa alante","\n")
+
+else:
+  print("BUEEEENO MANIIITO, USTED SE LA ACABA DE BEBER. USTED SOOOLOO EN GOOGLE ANALYTICS","\n")
+
+
+#Condicionales de Habilidades de Dirección
+if Lista[3] >= 90:
+  print("Ey pero te fue super bien en Habilidades de Dirección","\n")
+
+elif Lista[3] >= 75:
+  print("Bueno mio al meno pasate Habilidades de Dirección normalll","\n")
+
+elif Lista[3] >= 50:
+  print("Si esto no fuera SBS, tuvieras quemao en Habilidades de Dirección, pero aqui pasate, dale pa alante","\n")
+
+else:
+  print("BUEEEENO MANIIITO, USTED SE LA ACABA DE BEBER. USTED SOOOLOO EN DIRECCIÓN","\n")
