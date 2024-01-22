@@ -1,0 +1,51 @@
+#Juego de decisiones horoscopo:
+
+signos_del_zodiaco = [
+    'Aries', 'Tauro', 'Geminis', 'Cancer', 'Leo', 'Virgo',
+    'Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis']
+signos_minusculas = [signo.lower() for signo in signos_del_zodiaco]
+
+Compatibilidad = ['gemini','libra','cancer']
+Signo = ''
+pos_1 = ''
+Decision = ''
+
+while Decision != 'si' or Decision != 'no':
+
+  Decision = input('¿Quieres conocerme? (si o no) \n').lower()
+
+  if Decision == 'si':
+
+    Nombre = input('¿Cual es tu nombre? \n')
+    #Edad = input('¿Qué edad tienes? \n')
+
+    while pos_1 != 'si' or pos_1 != 'no':
+      pos_1 = input('¿OMG viejoo, tu me dices qué signo erees? (si o no) \n').lower()
+
+      if pos_1 == 'si':
+        print('¿Wow! Me encanta, qué signo eres? \n')
+        print(signos_del_zodiaco)
+
+        while Signo not in signos_minusculas:
+          pos_2 = input('(Elige tu signo de la lista de arriba) \n')
+          Signo = pos_2.lower()
+
+          if Signo not in signos_minusculas:
+            continue
+
+          elif Signo in Compatibilidad:
+            print('Ayyy somos tan  compatibleees. Deja que te pregunte sobre la posición de tu lunaaa! \n')
+            print('Continuara...')
+
+          else:
+            print('Lo siento, no me junto con personas que sean ' + Signo + '\n')
+            print('Perdiste, ' + Nombre + ', por no nacer en el mes correcto')
+          break
+        break
+      elif pos_1 == 'no':
+        print('Ay pero que pesado, lo más seguro escorpio por borde.')
+        break
+    break
+  elif Decision == 'no':
+    print('Ay pero que pesado y antichulipupi eres. Ni si quiera me dejaste que te preguntara tu signo')
+    break
