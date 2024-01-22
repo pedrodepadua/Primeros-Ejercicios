@@ -1,0 +1,44 @@
+# Creación de clases y una clase que hereda atributos de la primera.
+
+class Juego:
+  # Constructor
+  def __init__(self,nombre,publisher,tamano):
+    self.nombre = nombre
+    self.publisher = publisher
+    self.tamano = tamano
+  # Metodo identificador de la clase Juego
+  def identificar_j(self):
+    print(f'El nombre del juego es {self.nombre}, del publisher {self.publisher}. Y pesa {str(self.tamano)} GB.\n' )
+
+#Clase Multiplayer hereda de clase Juego
+class Multiplayer(Juego):
+
+  def __init__(self,nombre,publisher,tamano,cantidad_party):
+    super().__init__(nombre,publisher,tamano)
+    self.cantidad_party = cantidad_party
+
+  # Método identificador de la clase Multiplayer
+  def identificar_m(self):
+    print(f'El nombre del juego multijugador es {self.nombre}, del publisher {self.publisher}. Y pesa {str(self.tamano)} GB.\nCon un tamaño de party de {str(self.cantidad_party)}.' )
+
+juego1 = Juego('The Last of Us 2', 'Naughty Dog', 76)
+juego2 = Multiplayer('Baldurs Gate 3', 'Larian Studios', 122, 4)
+
+juego1.identificar_j()
+juego2.identificar_m()
+print()
+juego2.identificar_j() # Para el juego 2 también funciona el método de la clase Juego, ya que lo heredó.
+
+
+# Función que compara el tamaño en GB de ambos juegos
+def compara(x,y):
+  if x.tamano > y.tamano:
+    print(f'\nEl juego {x.nombre} es más pesado que el juego {y.nombre}.') 
+    print(f'{x.nombre} pesa {str(x.tamano - y.tamano)} GB más que {y.nombre}.')
+  elif x.tamano < y.tamano:
+    print(f'\nEl juego {y.nombre} es más pesado que el juego {x.nombre}.')
+    print(f'{y.nombre} pesa {str(y.tamano - x.tamano)} GB más que {x.nombre}.')
+  else:
+    print('\nLos dos juegos pesan lo mismo.')
+
+compara(juego1,juego2)
